@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="./imagens/ico.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
     
-    <title>Document</title>
+    <title>Weather App</title>
 </head>
 
 <body>
@@ -20,15 +21,18 @@
                 <div class="h1">
                     <h1>Clima</h1>
                 </div>
-                
+            </div>
+            <div class="cidade">
+                <span class="city" id="cidade"></span>
             </div>
             
             <div class="climat">
+                
                 <div class="climat2">
-                    <span class="temperatura">28</span>
-                    <span class="celsius">ºc</span>
+                    <span class="temperatura" id="temperatura"></span>
+                    <span class="celsius" id="celsius">ºc</span>
                 </div>
-                <span class="tempo">Limpo</span>
+                <span class="tempo" id ="tempo"></span>
             </div>
             <div class="informacoesweather">
                 <div class="climadias">
@@ -52,6 +56,7 @@
 
     </div>
     <script src="https://kit.fontawesome.com/407f74df21.js" crossorigin="anonymous"></script>
+    <script src="js.js"></script>
 </body>
 
 </html>
