@@ -18,8 +18,7 @@
 
 .cardweather {
     width: 400px;
-    height: 78vh;
-    display: flex;
+    height: 78vh;display: flex;
     flex-direction: column;
     justify-content: space-between;
     color: #fff;
