@@ -16,11 +16,11 @@ window.addEventListener("load", () => {
     var hora    = data.getHours();
     console.log(data, hora)
 
-    if (hora >= 17) {
-        document.getElementById("cardweather").style.backgroundImage = "url('./imagens/ceuiddle.jpg')";
-    } else{
-        document.getElementById("cardweather").style.backgroundImage = "url('./imagens/ceunoite.jpg')";
-    }
+    // if (hora >= 17) {
+    //     document.getElementById("cardweather").style.backgroundImage = "url('./imagens/ceuiddle.jpg')";
+    // } else{
+    //     document.getElementById("cardweather").style.backgroundImage = "url('./imagens/ceunoite.jpg')";
+    // }
 
     if (climat != null) {
         document.getElementById("celsius").style.display = 'none';
@@ -48,9 +48,6 @@ window.addEventListener("load", () => {
                     document.getElementById("celsius").style.display = 'true';
                     var status = document.getElementById('tempo').innerHTML;
                     //console.log(status)
-
-                    
-                    
 
                     if (climat !== null) {
                         document.getElementById("celsius").style.display = 'inline';
