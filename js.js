@@ -17,7 +17,6 @@ window.addEventListener("load", () =>{
     //}
 
     if(climat != null) {
-        console.log("a é nulo!");
         document.getElementById("celsius").style.display = 'none';
     }
 
@@ -25,6 +24,7 @@ window.addEventListener("load", () =>{
         navigator.geolocation.getCurrentPosition((position) => {
             long = position.coords.longitude;
             lat = position.coords.latitude;
+            
             const proxy = "https://cors-anywhere.herokuapp.com/";
             const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&lang=pt_br&appid=a3bfa74f3f7c8493c8f39b2a6164e112`
             fetch(api)
@@ -37,17 +37,18 @@ window.addEventListener("load", () =>{
                 const {id, main, description} = data.weather[0];
                 loc.textContent = name;
                 climate.textContent = maiuscula(description);
-                console.log(id, main, description)
                 
                 tempValue.textContent = Math.round(feels_like-273);
                 document.getElementById("celsius").style.display = 'true';
             })
 
             if(climat !== null) {
-                console.log("n é nulo!");
                 document.getElementById("celsius").style.display = 'inline';
             }
+
+
             
         })
     }
+    
 })
